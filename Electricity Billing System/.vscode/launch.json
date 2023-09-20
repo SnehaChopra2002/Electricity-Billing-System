@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Login",
+      "request": "launch",
+      "mainClass": "Electricity.Login",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "type": "java",
+      "name": "Project",
+      "request": "launch",
+      "mainClass": "Electricity.Project",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "type": "java",
+      "name": "Signup",
+      "request": "launch",
+      "mainClass": "Electricity.Signup",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/sneha/OneDrive/Documents/Electricity Billing System/Electricity Billing System/lib",
+      "program": "c:/Users/sneha/OneDrive/Documents/Electricity Billing System/Electricity Billing System/lib/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
