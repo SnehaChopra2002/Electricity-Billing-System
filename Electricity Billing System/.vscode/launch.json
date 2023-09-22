@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MeterInfo",
+      "request": "launch",
+      "mainClass": "Electricity.MeterInfo",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "type": "java",
+      "name": "NewCustomer",
+      "request": "launch",
+      "mainClass": "Electricity.NewCustomer",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "type": "java",
       "name": "Login",
       "request": "launch",
       "mainClass": "Electricity.Login",

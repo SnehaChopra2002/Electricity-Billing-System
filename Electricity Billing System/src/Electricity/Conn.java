@@ -15,7 +15,6 @@ public class Conn {
             s=c.createStatement();
         } catch (Exception e) {
             e.printStackTrace();
-            // TODO: handle exception
         }
     }
 }
