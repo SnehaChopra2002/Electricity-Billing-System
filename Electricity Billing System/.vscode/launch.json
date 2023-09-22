@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CalcBill",
+      "request": "launch",
+      "mainClass": "Electricity.CalcBill",
+      "projectName": "Electricity Billing System_65d39098"
+    },
+    {
+      "type": "java",
       "name": "MeterInfo",
       "request": "launch",
       "mainClass": "Electricity.MeterInfo",

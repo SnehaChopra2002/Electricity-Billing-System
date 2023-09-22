@@ -6,11 +6,13 @@ import java.awt.Image;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.*;
 
-public class Project extends JFrame {
+public class Project extends JFrame implements ActionListener {
+    JMenuItem calcbill,newcustomer ;
     Project() {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 
@@ -27,7 +29,7 @@ public class Project extends JFrame {
         master.setForeground(Color.BLUE);
         mb.add(master);
         // New Customer
-        JMenuItem newcustomer = new JMenuItem("New Customer");
+        newcustomer = new JMenuItem("New Customer");
 
         ImageIcon icon1 = new ImageIcon(ClassLoader.getSystemResource("icon/icon1.png"));
         Image image1 = icon1.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
@@ -35,6 +37,8 @@ public class Project extends JFrame {
 
         newcustomer.setMnemonic('D');
         newcustomer.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
+
+        newcustomer.addActionListener(this);
         master.add(newcustomer);
         
         // Customer details
@@ -59,7 +63,7 @@ public class Project extends JFrame {
         master.add(depositdetails);
 
         // Calculate Bill
-        JMenuItem calcbill = new JMenuItem("Calculate Bill");
+        calcbill = new JMenuItem("Calculate Bill");
 
         ImageIcon icon4 = new ImageIcon(ClassLoader.getSystemResource("icon/icon4.png"));
         Image image4 =icon4.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
@@ -67,6 +71,8 @@ public class Project extends JFrame {
 
         calcbill.setMnemonic('G');
         calcbill.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G, ActionEvent.CTRL_MASK));
+
+        calcbill.addActionListener(this);
         master.add(calcbill);
 
         setLayout(new FlowLayout());
@@ -178,6 +184,15 @@ public class Project extends JFrame {
         exit.setMnemonic('W');
         exit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.CTRL_MASK));
         utility.add(exit);
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        if(ae.getSource()==calcbill){
+            new CalcBill();
+        }
+        else if(ae.getSource()==newcustomer){
+            new NewCustomer();
+        }
     }
 
     public static void main(String[] args) {
